@@ -16,7 +16,7 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-engine-ahlev-hero
+ember install https://github.com/ohahlev/ember-engine-ahlev-hero
 ```
 
 

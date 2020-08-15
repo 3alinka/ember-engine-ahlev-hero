@@ -22,12 +22,12 @@ module('Integration | Component | hero', function(hooks) {
     //console.log(this.element.getElementsByTagName('img')[0].src);
 
     assert.notEqual(this.element.textContent.indexOf('Welcome'), -1);
-
     assert.notEqual(this.element.textContent.indexOf('Enjoy your time'), -1);
+
     
     assert.notEqual(this.element.getElementsByTagName('img'), null);
     assert.notEqual(this.element.getElementsByTagName('img')[0], null);
     assert.notEqual(this.element.getElementsByTagName('img')[0].src, null);
-    assert.equal(this.element.getElementsByTagName('img')[0].src.indexOf('/asserts/hero.png'), -1);
+    assert.notEqual(this.element.getElementsByTagName('img')[0].src.indexOf('/assets/hero.png'), -1);
   });
 });

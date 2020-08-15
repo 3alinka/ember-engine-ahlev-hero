@@ -1,7 +1,13 @@
 ember-engine-ahlev-hero
 ==============================================================================
 
-[Short description of the addon.]
+To create hero block.
+
+Why?
+------------------------------------------------------------------------------
+
+* installable/uninstallable
+* reusable in any ember project
 
 
 Compatibility
@@ -23,8 +29,9 @@ ember install https://github.com/ohahlev/ember-engine-ahlev-hero
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
-
+```
+<Hero @title="Welcome" @subtitle="Enjoy your learning time" @image="/assets/hero.png" />
+```
 
 Contributing
 ------------------------------------------------------------------------------

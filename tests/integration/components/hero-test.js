@@ -6,21 +6,28 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | hero', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  test('test render component', async function(assert) {
 
+    // when there is no attribute
     await render(hbs`<Hero />`);
+    assert.equal(this.element.textContent.trim(), 'explore');
 
-    assert.equal(this.element.textContent.trim(), '');
+    // when all attributes are given
 
-    // Template block usage:
     await render(hbs`
-      <Hero>
-        template block text
-      </Hero>
+      <Hero @title='Welcome' @subtitle='Enjoy your time' @image='/assets/hero.png' />
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    //console.log(this.element.textContent);
+    //console.log(this.element.getElementsByTagName('img')[0].src);
+
+    assert.notEqual(this.element.textContent.indexOf('Welcome'), -1);
+
+    assert.notEqual(this.element.textContent.indexOf('Enjoy your time'), -1);
+    
+    assert.notEqual(this.element.getElementsByTagName('img'), null);
+    assert.notEqual(this.element.getElementsByTagName('img')[0], null);
+    assert.notEqual(this.element.getElementsByTagName('img')[0].src, null);
+    assert.equal(this.element.getElementsByTagName('img')[0].src.indexOf('/asserts/hero.png'), -1);
   });
 });

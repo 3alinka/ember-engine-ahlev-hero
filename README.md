@@ -33,7 +33,7 @@ Run inside main application
 Go to the main application and install it
 
 ```
-ember install https://github.com/ohahlev/ember-engine-ahlev-hero
+ember install https://github.com/3alinka/ember-engine-ahlev-hero
 ```
 
 Use it as a normal component
